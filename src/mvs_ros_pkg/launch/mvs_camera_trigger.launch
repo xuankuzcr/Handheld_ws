@@ -3,7 +3,7 @@
     pkg="mvs_ros_pkg"
     type="grabImgWithTrigger"
     name="mvs_camera_trigger"
-    args="$(find mvs_ros_pkg)/config/right_camera_trigger.yaml"
+    args="$(find mvs_ros_pkg)/config/left_camera_trigger.yaml"
     respawn="true"
     output="screen"
   />

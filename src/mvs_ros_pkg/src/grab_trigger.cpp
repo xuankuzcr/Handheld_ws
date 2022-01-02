@@ -29,7 +29,6 @@ void setParams(void *handle, const std::string &params_file) {
   int ExposureTimeUpper = Params["AutoExposureTimeUpper"];
   int GainAuto = Params["GainAuto"];
   int GammaSelector = Params["GammaSelector"];
-  int ExposureTime = Params["ExposureTime"];
   int nRet;
   nRet = MV_CC_SetEnumValue(handle, "ExposureAuto", ExposureAuto);
   if (MV_OK == nRet) {
@@ -38,15 +37,6 @@ void setParams(void *handle, const std::string &params_file) {
   } else {
     ROS_ERROR_STREAM("Fail to set Exposure auto mode");
   }
-  // nRet = MV_CC_SetExposureTime(handle, ExposureTime);
-  // if (MV_OK == nRet) {
-  //   std::string msg =
-  //       "Set Exposure Time: " + std::to_string(ExposureTime) + "ms";
-  //   ROS_INFO_STREAM(msg.c_str());
-  // } else {
-  //   ROS_ERROR_STREAM("Fail to set Exposure Time");
-  // }
-
   nRet = MV_CC_SetAutoExposureTimeLower(handle, ExposureTimeLower);
   if (MV_OK == nRet) {
     std::string msg =
@@ -119,7 +109,7 @@ static void *WorkThread(void *pUser) {
       srcImage =
           cv::Mat(stImageInfo.nHeight, stImageInfo.nWidth, CV_8UC3, pData);
       sensor_msgs::ImagePtr msg =
-          cv_bridge::CvImage(std_msgs::Header(), "rgb8", srcImage).toImageMsg();
+          cv_bridge::CvImage(std_msgs::Header(), "bgr8", srcImage).toImageMsg();
       msg->header.stamp = rcv_time;
       pub.publish(msg);
     }
