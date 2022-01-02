@@ -1,0 +1,13 @@
+{
+    "cmake.configureOnOpen": false,
+    "python.autoComplete.extraPaths": [
+        "/home/dji/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/home/dji/ws_livox/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/dji/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/home/dji/ws_livox/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ]
+}

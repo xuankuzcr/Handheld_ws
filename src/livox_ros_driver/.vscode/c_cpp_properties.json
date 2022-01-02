@@ -1,0 +1,21 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/dji/catkin_ws/devel/include/**",
+        "/home/dji/ws_livox/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/dji/catkin_ws/src/Onboard-SDK-ROS/include/**",
+        "/home/dji/catkin_ws/src/FAST_LIO/include/**",
+        "/home/dji/catkin_ws/src/mvs_ros_pkg/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
