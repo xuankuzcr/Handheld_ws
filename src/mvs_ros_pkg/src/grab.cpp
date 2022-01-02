@@ -28,6 +28,8 @@ void setParams(void *handle, const std::string &params_file) {
   int GainAuto = Params["GainAuto"];
   int GammaSelector = Params["GammaSelector"];
   float FrameRate = Params["FrameRate"];
+  int ExposureTime = Params["ExposureTime"];
+
   int nRet;
   nRet = MV_CC_SetEnumValue(handle, "ExposureAuto", ExposureAuto);
   if (MV_OK == nRet) {
@@ -36,6 +38,16 @@ void setParams(void *handle, const std::string &params_file) {
   } else {
     ROS_ERROR_STREAM("Fail to set Exposure auto mode");
   }
+
+  nRet = MV_CC_SetExposureTime(handle, ExposureTime);
+  if (MV_OK == nRet) {
+    std::string msg =
+        "Set Exposure Time: " + std::to_string(ExposureTime) + "ms";
+    ROS_INFO_STREAM(msg.c_str());
+  } else {
+    ROS_ERROR_STREAM("Fail to set Exposure Time");
+  }
+
   nRet = MV_CC_SetAutoExposureTimeLower(handle, ExposureTimeLower);
   if (MV_OK == nRet) {
     std::string msg =
@@ -44,6 +56,7 @@ void setParams(void *handle, const std::string &params_file) {
   } else {
     ROS_ERROR_STREAM("Fail to set Exposure Time Lower");
   }
+
   nRet = MV_CC_SetAutoExposureTimeUpper(handle, ExposureTimeUpper);
   if (MV_OK == nRet) {
     std::string msg =
@@ -52,6 +65,7 @@ void setParams(void *handle, const std::string &params_file) {
   } else {
     ROS_ERROR_STREAM("Fail to set Exposure Time Upper");
   }
+
   nRet = MV_CC_SetEnumValue(handle, "GainAuto", GainAuto);
   if (MV_OK == nRet) {
     std::string msg = "Set Gain Auto: " + GainAutoStr[GainAuto];
@@ -59,6 +73,7 @@ void setParams(void *handle, const std::string &params_file) {
   } else {
     ROS_ERROR_STREAM("Fail to set Gain auto mode");
   }
+  
   nRet = MV_CC_SetFrameRate(handle, FrameRate);
   if (MV_OK == nRet) {
     std::string msg = "Set Frame Rate: " + std::to_string(FrameRate) + "hz";
