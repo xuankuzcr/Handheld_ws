@@ -13,6 +13,7 @@ TopicName: "left_camera/image"
 
 # Exposure Auto, 0 stands for Off, 1 stands for Once, 2 stands for Continues
 ExposureAuto: 2
+ExposureTime: 5000
 AutoExposureTimeLower: 65
 AutoExposureTimeUpper: 10000
 # Gain Auto, 0 stands for Off, 1 stands for Once, 2 stands for Continues
