@@ -1,0 +1,15 @@
+--cpu Cortex-M3
+"c:\users\theodore\desktop\32hex\system_stm32f10x.o"
+"c:\users\theodore\desktop\32hex\core_cm3.o"
+"c:\users\theodore\desktop\32hex\misc.o"
+"c:\users\theodore\desktop\32hex\stm32f10x_rcc.o"
+"c:\users\theodore\desktop\32hex\stm32f10x_gpio.o"
+"c:\users\theodore\desktop\32hex\stm32f10x_exti.o"
+"c:\users\theodore\desktop\32hex\startup_stm32f10x_md.o"
+"c:\users\theodore\desktop\32hex\stm32f10x_it.o"
+"c:\users\theodore\desktop\32hex\main.o"
+"c:\users\theodore\desktop\32hex\public.o"
+--strict --scatter "C:\Users\theodore\Desktop\32hex\51old.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\List\51old.map" -o C:\Users\theodore\Desktop\32hex\51old.axf

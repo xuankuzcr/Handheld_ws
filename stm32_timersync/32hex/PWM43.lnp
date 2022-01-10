@@ -1,0 +1,21 @@
+--cpu Cortex-M3
+"c:\users\theodore\desktop\32hex\main.o"
+"c:\users\theodore\desktop\32hex\stm32f10x_it.o"
+"c:\users\theodore\desktop\32hex\system_stm32f10x.o"
+"c:\users\theodore\desktop\32hex\led.o"
+"c:\users\theodore\desktop\32hex\key.o"
+"c:\users\theodore\desktop\32hex\timer.o"
+"c:\users\theodore\desktop\32hex\delay.o"
+"c:\users\theodore\desktop\32hex\sys.o"
+"c:\users\theodore\desktop\32hex\usart.o"
+"c:\users\theodore\desktop\32hex\core_cm3.o"
+"c:\users\theodore\desktop\32hex\startup_stm32f10x_hd.o"
+"c:\users\theodore\desktop\32hex\misc.o"
+"c:\users\theodore\desktop\32hex\stm32f10x_gpio.o"
+"c:\users\theodore\desktop\32hex\stm32f10x_rcc.o"
+"c:\users\theodore\desktop\32hex\stm32f10x_tim.o"
+"c:\users\theodore\desktop\32hex\stm32f10x_usart.o"
+--strict --scatter "C:\Users\theodore\Desktop\32hex\PWM43.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\PWM43.map" -o C:\Users\theodore\Desktop\32hex\PWM43.axf

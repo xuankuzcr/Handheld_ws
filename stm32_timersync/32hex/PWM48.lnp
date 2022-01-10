@@ -1,0 +1,21 @@
+--cpu Cortex-M3
+"..\..\32hex\main.o"
+"..\..\32hex\stm32f10x_it.o"
+"..\..\32hex\system_stm32f10x.o"
+"..\..\32hex\led.o"
+"..\..\32hex\key.o"
+"..\..\32hex\timer.o"
+"..\..\32hex\delay.o"
+"..\..\32hex\sys.o"
+"..\..\32hex\usart.o"
+"..\..\32hex\core_cm3.o"
+"..\..\32hex\startup_stm32f10x_hd.o"
+"..\..\32hex\misc.o"
+"..\..\32hex\stm32f10x_gpio.o"
+"..\..\32hex\stm32f10x_rcc.o"
+"..\..\32hex\stm32f10x_tim.o"
+"..\..\32hex\stm32f10x_usart.o"
+--strict --scatter "..\..\32hex\PWM48.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\PWM48.map" -o ..\..\32hex\PWM48.axf
