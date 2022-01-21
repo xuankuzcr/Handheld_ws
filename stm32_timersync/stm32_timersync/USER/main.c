@@ -24,10 +24,12 @@
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2); 	 //设置NVIC中断分组2:2位抢占优先级，2位响应优先级
 	uart_init(115200);	 //串口初始化为115200
  	LED_Init();			     //LED端口初始化
-	TIM4_PWM_Init(9999,7199); // 1 Hz    pin_B6
+	TIM4_PWM_Init(9999,7199); // 1 Hz    pin_B6        void TIM4_PWM_Init(u16 arr,u16 psc)
 	delay_ms(50);
  	TIM3_PWM_Init(999,7199);	 // 10 Hz  pin_B5
+	 
 	 // 不分频。PWM频率=72000000/900=80Khz 20 Hz
+	 // hz = 72M / psc / arr     pwm = ccr / arr  
 //   	while(1)
 //	{
 // 		delay_ms(10);	 

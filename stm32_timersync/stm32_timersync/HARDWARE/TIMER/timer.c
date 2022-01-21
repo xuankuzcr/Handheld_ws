@@ -101,7 +101,7 @@ void TIM4_PWM_Init(u16 arr,u16 psc)
 
  	TIM_ARRPreloadConfig(TIM4, ENABLE);
 	TIM_Cmd(TIM4, ENABLE);  //??TIM4
-	TIM_SetCompare1(TIM4,4999);	
+	TIM_SetCompare1(TIM4,4999);	 // ccr  set pwm value
 }
 
 
